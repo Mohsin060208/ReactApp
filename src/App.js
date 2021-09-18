@@ -19,7 +19,7 @@ function App() {
     setQuery(event.target.value);
   };
   function filterUser(user) {
-    return searchTerm.split(' ').some(s => user.name.toLowerCase().includes(s.toLowerCase()));
+    return searchTerm.trim().split(' ').some(s => user.name.toLowerCase().includes(s.toLowerCase()));
   }
   return (
     <div className="App">
